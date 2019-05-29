@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SimpleMDE from 'react-simplemde-editor';
 import "easymde/dist/easymde.min.css";
+import AdminMenu from './components/menu/AdminMenu';
 
 export default class AdminIndex extends Component {
     constructor(props) {
@@ -11,7 +12,8 @@ export default class AdminIndex extends Component {
         return (
             <div>
                 <h1>AdminIndex</h1>
-                <SimpleMDE onChange={this.handleChange} />
+                <AdminMenu />
+                {/* <SimpleMDE onChange={this.handleChange} /> */}
             </div>
         )
     }
