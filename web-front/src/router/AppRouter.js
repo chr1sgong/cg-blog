@@ -8,18 +8,6 @@ function AppRouter() {
     return (
         <Router>
             <div>
-                {/* <nav>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/about">About</Link>
-                    </li>
-                    <li>
-                        <Link to="/admin">Admin</Link>
-                    </li>
-                </nav> */}
-
                 <Route path="/" exact component={FrontIndex} />
                 <Route path="/about" component={About} />
                 <Route path="/admin" component={AdminIndex} />

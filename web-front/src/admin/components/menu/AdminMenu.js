@@ -39,13 +39,11 @@ export default class AdminMenu extends Component {
                     </Menu>
                 </Header>
                 <Content style={{padding: '0 50px'}}>
-                    <Breadcrumb style={{margin: '16px 0'}}>
-                        <Breadcrumb.Item>Home</Breadcrumb.Item>
-                        <Breadcrumb.Item>List</Breadcrumb.Item>
-                        <Breadcrumb.Item>App</Breadcrumb.Item>
-                    </Breadcrumb>
+                    
                     <div style={{background: '#fff', padding: 24, minHeight: 280}}>
-                        Content
+                        <h2>按钮-写文章</h2>
+                        <h2>展示所有文章-可以点击进去，然后查看详情</h2>
+                        <h2>相比与游客，管理员可以选择编辑文章，也可以设置文章的属性为私密或者公开</h2>
                     </div>
                 </Content>
                 <Footer style={{textAlign: 'center'}}>

@@ -12,22 +12,14 @@ const carouselImgs = [
 export default class Banner extends Component {
     constructor(props) {
         super(props);
-        this.renderCarousel = this.renderCarousel.bind(this);
     }
 
     render() {
         return (
-            <Carousel autoplay>
-                {this.renderCarousel(carouselImgs)}
-            </Carousel>
-        );
-    }
-
-    renderCarousel(imgs) {
-        return imgs.map((item,index)=>
-            <div key={index} className={style.carouselImgContainer}>
-                <img src={item}/>
+            <div className={style.carouselImgContainer}>
+                <img src={carouselImgs[1]} className={style.img}/>
             </div>
-        )
+           
+        );
     }
 }
