@@ -26,4 +26,4 @@ hs_err_pid*
 .vscode/
 .idea/
 .settings/
-web-front/.vscode
+web-front/.vscode/
