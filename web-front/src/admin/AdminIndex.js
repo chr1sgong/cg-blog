@@ -1,28 +1,22 @@
 import React, { Component } from 'react';
-import SimpleMDE from 'react-simplemde-editor';
-import "easymde/dist/easymde.min.css";
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import axios from 'axios';
+
+import { Layout, Menu, Breadcrumb } from 'antd';
+import { Form, Input, Select, Button } from 'antd';
+
 import AdminMenu from './components/menu/AdminMenu';
+import AddArticle from './components/article/AddArticle';
 
-import { Button } from 'antd';
+import "easymde/dist/easymde.min.css";
 
+const { Header, Content, Footer } = Layout;
 export default class AdminIndex extends Component {
     constructor(props) {
         super(props);
-    }
-
-    state = {
-        textValue: "I am the initial value. Erase me, or try the button above."
-    };
-
-    handleChange = value => {
-        this.setState({
-          textValue: value
-        });
-      };
-
-    post(params) {
-        // todo 修改
-        console.log(this.props.value);
+        this.state = {
+            textValue: "I am the initial value. Erase me, or try the button above."
+        };
     }
 
     render() {
@@ -30,10 +24,11 @@ export default class AdminIndex extends Component {
             <div>
                 <h1>AdminIndex</h1>
                 <AdminMenu />
-                <SimpleMDE 
-                    value={this.state.textValue}
-                    onChange={this.handleChange} />
-                <Button onClick={this.post}>发表</Button>
+               
+                <Route path="/admin/write" component={AddArticle} />
+                <Footer style={{ textAlign: 'center' }}>
+                    Ant Design ©2018 Created by Ant UED
+                </Footer>
             </div>
         )
     }
