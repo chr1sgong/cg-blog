@@ -45,7 +45,7 @@ public class ArticleController {
     public JsonResponse<ArticlePost> detail(@PathVariable("articleId") String articleId) {
         ArticlePost data = articleService.getArticle(articleId);
         if (data == null) {
-            log.debug("当前文章id{}不存在");
+            log.debug("当前文章id{}不存在", articleId);
         }
         JsonResponse<ArticlePost> response = new JsonResponse<>();
         response.setData(data);
