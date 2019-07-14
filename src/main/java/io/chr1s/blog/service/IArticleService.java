@@ -1,6 +1,6 @@
 package io.chr1s.blog.service;
 
-import io.chr1s.blog.domain.Article;
+import io.chr1s.blog.domain.ArticlePost;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ public interface IArticleService {
      * @param articleId
      * @return
      */
-    Article get(String articleId);
+    ArticlePost getArticle(String articleId);
 
     /**
      * 分页查询
@@ -19,12 +19,12 @@ public interface IArticleService {
      * @param pageSize
      * @return
      */
-    List<Article> pagination(int pageNo, int pageSize);
+    List<ArticlePost> pagination(int pageNo, int pageSize);
 
     /**
      * 新增文章
      * @param article
      * @return
      */
-    boolean add(Article article);
+    boolean add(ArticlePost article);
 }

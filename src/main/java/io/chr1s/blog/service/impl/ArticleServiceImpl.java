@@ -1,7 +1,7 @@
 package io.chr1s.blog.service.impl;
 
-import io.chr1s.blog.dao.ArticleMapper;
-import io.chr1s.blog.domain.Article;
+import io.chr1s.blog.dao.ArticlePostMapper;
+import io.chr1s.blog.domain.ArticlePost;
 import io.chr1s.blog.service.IArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,20 +12,20 @@ import java.util.List;
 public class ArticleServiceImpl implements IArticleService {
 
     @Autowired
-    private ArticleMapper articleMapper;
+    private ArticlePostMapper articlePostMapper;
 
     @Override
-    public Article get(String articleId) {
+    public ArticlePost getArticle(String articleId) {
         return null;
     }
 
     @Override
-    public List<Article> pagination(int pageNo, int pageSize) {
-        return null;
+    public List<ArticlePost> pagination(int pageNo, int pageSize) {
+        return articlePostMapper.pagination(pageNo, pageSize);
     }
 
     @Override
-    public boolean add(Article article) {
-        return articleMapper.insertSelective(article) > 0;
+    public boolean add(ArticlePost article) {
+        return articlePostMapper.insertSelective(article) > 0;
     }
 }
