@@ -16,7 +16,7 @@ public class ArticleServiceImpl implements IArticleService {
 
     @Override
     public ArticlePost getArticle(String articleId) {
-        return null;
+        return articlePostMapper.selectByArticleId(articleId);
     }
 
     @Override

@@ -44,6 +44,7 @@ public class ArticleController {
     @GetMapping("/{articleId}")
     public JsonResponse<ArticlePost> detail(@PathVariable("articleId") String articleId) {
         ArticlePost data = articleService.getArticle(articleId);
+        log.info("当前文章: {}", data);
         if (data == null) {
             log.debug("当前文章id{}不存在", articleId);
         }
